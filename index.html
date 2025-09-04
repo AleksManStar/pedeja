@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSParts - Автозапчасти в ЕС</title>
+  <meta name="description" content="BSParts - быстрый подбор автозапчастей по марке и модели. Доставка по всей Европе.">
+  <meta property="og:title" content="BSParts - Автозапчасти в ЕС">
+  <meta property="og:description" content="Быстрый подбор автозапчастей для вашего автомобиля.">
+  <meta property="og:image" content="images/background.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">BSParts</div>
+    <nav id="nav">
+      <ul>
+        <li><a href="#how-it-works" data-i18n="howItWorks"></a></li>
+        <li><a href="#contact-form" data-i18n="formTitle"></a></li>
+        <li><a href="#advantages" data-i18n="advantagesTitle"></a></li>
+        <li><a href="#contacts" data-i18n="contactsTitle"></a></li>
+      </ul>
+    </nav>
+    <div class="lang-select">
+      <select id="languageSwitcher">
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+      </select>
+    </div>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main>
+    <section id="how-it-works" class="how-it-works">
+      <h1 data-i18n="howItWorks"></h1>
+      <p>Мы помогаем вам быстро находить нужные автозапчасти по марке и модели вашего автомобиля.</p>
+    </section>
+
+    <section id="contact-form" class="contact-form">
+      <h2 data-i18n="formTitle"></h2>
+      <form id="requestForm">
+        <label for="brand">Марка машины</label>
+        <input type="text" id="brand" name="brand" list="brands" required>
+        <datalist id="brands">
+          <option value="Audi">
+          <option value="BMW">
+          <option value="Mercedes">
+          <option value="Volkswagen">
+          <option value="Skoda">
+        </datalist>
+
+        <label for="model">Модель машины</label>
+        <input type="text" id="model" name="model" list="models" required>
+        <datalist id="models">
+          <option value="A4">
+          <option value="X5">
+          <option value="C-Class">
+          <option value="Golf">
+        </datalist>
+
+        <label for="country">Страна</label>
+        <select id="country" name="country" required>
+          <option value="">Выберите страну</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="Poland">Poland</option>
+        </select>
+
+        <label for="part">Какая деталь интересует?</label>
+        <input type="text" id="part" name="part" required>
+
+        <label for="contact">Контактные данные</label>
+        <input type="text" id="contact" name="contact" placeholder="Email или телефон" required>
+
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </section>
+
+    <section id="advantages" class="advantages">
+      <h2 data-i18n="advantagesTitle"></h2>
+      <ul>
+        <li>Широкий выбор запчастей</li>
+        <li>Доставка по всей Европе</li>
+        <li>Надёжные поставщики</li>
+        <li>Поддержка 24/7</li>
+      </ul>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <h2 data-i18n="contactsTitle"></h2>
+      <p>Email: info@bsparts.com</p>
+      <p>Телефон: +49 123 456 789</p>
+      <div class="messengers">
+        <a href="https://wa.me/49123456789" target="_blank">WhatsApp</a>
+        <a href="https://t.me/bsparts" target="_blank">Telegram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BSParts. Все права защищены.</p>
+  </footer>
+</body>
+</html>
